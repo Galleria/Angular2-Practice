@@ -1,0 +1,434 @@
+body {
+    margin:0;
+    
+    font-size: 12px;
+}
+h1 {
+	font-size: 24px;
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+label {
+	font-weight: 600;
+}
+.searchCriteriaLabelL {
+	margin-left: 0px;
+}
+.paddingL15R0 {
+	padding-left: 15px;
+	padding-right: 0px;
+}
+.paddingLR0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.paddingTB3{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.paddingTB5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.paddingTB20{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+.paddingB10{
+    padding-bottom: 10px !important;
+}
+.paddingT10{
+    padding-top: 10px !important;
+}
+.paddingT20 {
+	padding-top: 20px;
+}
+.paddingLR0 input[type="text"], select{
+    width: 100%;
+}
+.paddingL10R0 {
+	padding-left: 10px;
+	padding-right: 0px;
+}
+.paddingL0R10 {
+	padding-left: 0px;
+	padding-right: 10px;
+}
+.paddingL0R15 {
+	padding-left: 0px;
+	padding-right: 15px;
+}
+.paddingR25 {
+	padding-right: 25px;
+}
+.marginLR0{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.marginL20R0 {
+	margin-left: 20px !important;
+	margin-right: 0px !important;
+}
+select{
+    vertical-align: middle;
+    height: 25px;
+}
+.searchResultHead{
+     cursor: pointer;
+     background: #F6F7F7 !important;
+}
+
+.cursorPonter{
+    cursor: pointer;
+}
+
+.batchesTab{
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.batchesTab .form-inline .col-md-3, .batchesTab .form-inline .batchesTab .form-inline .col-md-1{
+    padding-left: 5px;
+    padding-right: 0px;
+}
+.batchesTab .form-inline .col-md-3 input, .batchesTab .form-inline .col-md-1 input{
+    width: 100%;
+}
+
+.tab-content, .nav-item.active .nav-link{
+    background: #F6F7F7 !important;
+}
+.nav-item {
+	padding: 10px 15px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    font-size: 13px;
+    border-top: 3px solid #FFF;
+	margin-bottom: 0px;
+}
+.nav-item.active {
+	background-color: rgb(246, 247, 247);
+    cursor: default;
+	border-bottom: 1px solid rgb(246, 247, 247);
+    border-right: 1px solid rgb(209, 210, 212);
+    border-top: 3px solid rgb(0, 87, 142);
+    border-left: 1px solid rgb(209, 210, 212);
+}
+li.nav-item.active:hover {
+	border-bottom: 1px solid rgb(246, 247, 247);
+	margin-bottom: 0px;
+}
+li.nav-item:hover {
+	background-color: rgb(246, 247, 247);
+	border-bottom: 1px solid #d1d2d4;
+	margin-bottom: 0px;
+}
+.nav-tabs > li > a {
+    font-size: 13px;
+	color: #555;
+}
+.nav > li > a {
+	padding: 0px;
+	border: none;
+}
+.nav > li > a:hover > span{
+	background-color: rgb(246, 247, 247);
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: none;
+	margin-bottom: 0px;
+}
+.nav-tabs > li {
+	margin-bottom: 0px;
+}
+.paddingT10{
+    padding-top: 10px;
+}
+.panelHead{
+    font-size: larger;
+	padding-left: 5px;
+	font-weight: 600;
+}
+a{
+    cursor: pointer;
+}
+/*START Equal bootstrap column height*/
+.equal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.equal > div[class*='col-'] {  
+  display: flex;
+  flex-direction: column;
+}
+/*END Equal bootstrap column height*/
+.table > tbody > tr:first-child{
+    background-color: #f5f5f5;
+}
+/*START Overide bootstrap "btn" for actionDropdown*/
+.actionDropdown{
+    padding: 2px 12px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgba(153, 153, 153, 1);
+}
+.actionDropdown:hover{
+    color: #fff;
+    background-color: rgba(119, 119, 119, 1);
+}
+
+.actionDropdownColumn{
+    width: 127px;
+}
+/*END Overide bootstrap "btn" for actionDropdown*/
+.modal{
+    text-align: left;
+}
+.dropdown{
+    width: 120px;
+}
+.dropdown div{
+    margin:0px;
+}
+.dropdown-menu {
+	min-width: 120px;
+	width: 120px;
+}
+.dropdown-menu > li > a {
+	padding: 3px 10px;
+}
+.btn-group > .btn:first-child {
+    margin-left: 0;
+    margin-right: 2px;
+}
+.primaryButton {
+	height: 30px;
+	width: 53px;
+    font-weight:600;
+    color: #FFF;
+	border: 1px solid #00578E;
+	background-color:#00578E;
+	border-radius: 2px;
+	font-size:12px;
+	cursor:pointer;
+}
+.primaryButton:hover, .primaryButton:focus {
+    background-color:#00395C;
+    color: #FFF;
+}
+.loadingModal {
+  text-align: center;
+  padding: 0!important;
+}
+.loadingModal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjusts for spacing */
+}
+.loadingModal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.loading {
+	color: #282828;
+	z-index: 900;
+	width: 200px;
+	text-align: center;
+	padding: 5px 0;
+	background-color: #CCC;
+	opacity: 0.8;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	font-size: 14px;
+	font-weight: 600;
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	margin-top: -9em; /*set to a negative number 1/2 of your height*/
+	margin-left: -9em; /*set to a negative number 1/2 of your width*/
+}
+.loadingIcon{
+	height: 10px;
+}
+.displayInline{
+    display: inline-block;
+}
+.buttonHeight {
+	height: 30px;
+}
+a.secondaryLink {
+	line-height: 2.3;
+	vertical-align: middle;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+.docSecondColumnInput {
+	width: 100%;
+}
+@media (min-width: 1024px) {
+	.col-md-12 {
+		padding-left: 0px;
+	}
+	.cycleLabel{
+		float:right;
+		padding-left: 25px;
+	}
+	.cycleInput {
+		margin-left: 10px;
+		width: 7%;
+		float: right;
+		margin-right: 15px;
+	}
+	.infoIcon{
+		background-color: #fff;
+		box-shadow: 0 1px 6px #b4b4b4;
+		border-radius: 30px;
+		border: 1px solid #00578E;
+		cursor: pointer;
+		font-family: "Times New Roman",Times,serif;
+		font-style: italic;
+		font-weight: bold;
+		padding: 3px;
+		text-align: center;
+		width: 24px;
+}
+.infoIcon:hover{
+	background-color:#EEE;
+}
+	.tripleColumnInput {
+		width: 7%;
+	}
+	.outputChannelLabel {
+		padding-right: 0px;
+	}
+	.outputChannel {
+		width: 31.5%;
+		float: right;
+		margin-right: 15px;
+	}
+	.lastColumn {
+		float: right;
+		margin-right: 15px;
+	}
+	.dateRange {
+		padding-right: 15px;
+	}
+	.lastDate {
+		text-align: right;
+		float:right;
+	}
+	.row {
+		margin-left: 0px;
+	}
+	.primaryButton {
+		margin-right: 8px;
+		float: right;
+		text-align:right;
+	}
+	.table > tbody > tr > td:nth-child(10) {
+		width: 127px;
+		max-width: 150px;
+		overflow: visible;
+		text-overflow: initial;
+	}
+	.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+		max-width: 110px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+@media (min-width: 1280px) {
+	.outputChannel {
+		width: 31.9%;
+	}
+	.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+		max-width: 150px;
+	}
+}
+@media (max-width: 1023px) {
+	.batchesTab .form-inline .col-md-3, .batchesTab .form-inline .batchesTab .form-inline .col-md-1 {
+		padding-left: 0px;
+	}
+	.col-md-1 {
+		padding-left: 0px;
+	}
+	.col-md-2  {
+		padding-left: 0px;
+	}
+	.col-md-3 {
+		padding-left: 0px;
+	}
+	.col-md-4 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.primaryButton {
+		margin-left: 20px;
+	}
+	a.secondaryLink {
+		float:left;
+		padding-left: 20px;
+		margin-top: 10px;
+		
+	}
+	.cycleLabel{
+		float:left;
+		padding-top: 10px;
+	}
+	.cycleInput {
+		margin-left: 10px;
+		width: 50%;
+		float: right;
+		padding-top: 10px;
+	}
+	.stackedDisplayTPad {
+		padding-top: 10px;
+	}
+}
+
+.notifyMessage{
+    height: 25px;
+    background: inherit;
+    border: none;
+    border-radius: 3px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Open Sans Semibold', 'Open Sans Regular', 'Open Sans';
+    font-weight: 600;
+    font-style: normal;
+    color: #FFFFFF;
+	padding-right: 0px;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+.closeNotifyMessage{
+    float: right;
+    padding: 4px 10px;
+	cursor: pointer;
+}
+.errText{
+	line-height: 25px;
+	vertical-align: middle;
+}
+.success{
+	background-color:rgba(74, 177, 96, 1)
+}
+.error{
+	background-color: rgba(152, 0, 0, 1);
+}
+.w135{
+	width: 135px;
+}
