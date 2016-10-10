@@ -5,6 +5,8 @@ import { FormsModule , NgForm }    from '@angular/forms';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { MaterialModule } from '@angular/material';
 
+import {ChartsModule} from 'ng2-charts/ng2-charts';
+
 import { AppComponent } from './app.component';
 import {
           HeaderComponent,
@@ -15,7 +17,8 @@ import {
           DashboardComponent,
           DashboardDetailComponent,
           PageNotFoundComponent,
-          LoadingModal
+          LoadingModal,
+          BarComponent
         } from './components/';
 
 import { routing , appRoutingProviders } from './app.route';
@@ -31,6 +34,7 @@ import {
                   MaterialModule,
                   BrowserModule ,
                   Ng2BootstrapModule ,
+                  ChartsModule,
                   FormsModule ,
                   HttpModule
                 ],
@@ -44,6 +48,7 @@ import {
                     FooterComponent,
                     NotifyMessage,
                     LoadingModal,
+                    BarComponent,
                     AppComponent
                   ],
     bootstrap:    [

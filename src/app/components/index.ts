@@ -8,3 +8,4 @@ export * from './Home/home.component';
 export * from './PageNotFound/pageNotFound.component';
 export * from './DashboardDetail/dashboardDetail.component';
 export * from './Loading/loadingModal.component';
+export * from './Chart/Bar.component'

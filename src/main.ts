@@ -10,6 +10,10 @@ import {AppModule} from './app/app.module';
 import 'bootstrap/dist/css/bootstrap.css';
 import './app/assets/css/styles.css';
 import '@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+//      <script src="node_modules/chart.js/src/chart.js"></script>
+
+import '../node_modules/chart.js/src/chart.js';
+
 
 declare var process: any;
 if (process.env.ENV !== "DEV") {
