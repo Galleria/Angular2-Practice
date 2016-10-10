@@ -1,17 +1,5 @@
-<div *ngIf="_showMessage" [ngClass]="_notifyMessageRow">
-
-    <div  class="col-md-12 notifyMessage">
-        <span class="errText" [ngSwitch]="_message">
-            <template ngSwitchCase="500">
-                There was a problem processing the request
-            </template>
-
-            <template ngSwitchDefault>
-                {{_message}}
-            </template>
-        </span>
-        <div class="closeNotifyMessage" (click)="_showMessage = false">
-            <span>X</span>
-        </div>
-    </div>
+<div>
+  <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+    {{ alert?.msg }}
+  </alert>
 </div>

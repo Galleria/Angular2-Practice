@@ -7,7 +7,7 @@ import{Component, ChangeDetectionStrategy, ViewContainerRef , HostListener} from
 
 export class AppComponent{
 
-    constructor(){
+    constructor(private viewContainerRef:ViewContainerRef){
     }
 /*
     @HostListener('mousedown', ['$event'])

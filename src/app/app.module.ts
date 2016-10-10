@@ -14,12 +14,16 @@ import {
           HomeComponent,
           DashboardComponent,
           DashboardDetailComponent,
-          PageNotFoundComponent
+          PageNotFoundComponent,
+          LoadingModal
         } from './components/';
 
 import { routing , appRoutingProviders } from './app.route';
 
-//import {} from './shared/services/';
+import {
+  LoadingService,
+  NotifyService
+} from './services/';
 
 @NgModule({
     imports:    [
@@ -39,13 +43,16 @@ import { routing , appRoutingProviders } from './app.route';
                     MainComponent,
                     FooterComponent,
                     NotifyMessage,
+                    LoadingModal,
                     AppComponent
                   ],
     bootstrap:    [
                     AppComponent
                   ],
     providers:    [
-                    appRoutingProviders
+                    appRoutingProviders,
+                    NotifyService,
+                    LoadingService
                   ]
 })
 
