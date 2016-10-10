@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {BaseComponent} from '../BaseComponent';
+
+import { NotifyService } from '../../services';
 
 @Component({
     template:  `
@@ -8,6 +11,9 @@ import {Component} from '@angular/core';
     `
 })
 
-export class DashboardComponent {
+export class DashboardComponent extends BaseComponent{
 
+  constructor(public notifyService:NotifyService) {
+    super(notifyService);
+  }
 }

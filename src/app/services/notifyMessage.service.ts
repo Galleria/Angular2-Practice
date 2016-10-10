@@ -6,18 +6,32 @@ import 'rxjs/add/operator/share';
 @Injectable()
 export class NotifyService{
 
-    public notifyMessage$ : Observable<String>;
-    private _observer : Observer<String>;
+    public showMessage$ : Observable<String>;
+    public clearMessage$ : Observable<String>;
+    private _observer_show : Observer<String>;
+    private _observer_clear : Observer<String>;
 
     constructor(){
-        this.notifyMessage$ = new Observable(
-            observer => this._observer = observer
+        this.showMessage$ = new Observable(
+            observer => this._observer_show = observer
         ).share();
+
+        this.clearMessage$ = new Observable(
+            observer => this._observer_clear = observer
+        ).share();
+
     }
 
     showNotifyMessage(messageObject){
-        if(this._observer){
-            this._observer.next(messageObject);
+        if(this._observer_show){
+            this._observer_show.next(messageObject);
         }
     }
+
+    clearNotifyMessage(){
+        if(this._observer_clear){
+            this._observer_clear.next('clear');
+        }
+    }
+
 }
