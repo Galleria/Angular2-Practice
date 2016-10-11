@@ -3,7 +3,6 @@ import {BaseComponent} from '../BaseComponent';
 
 import { NotifyService } from '../../services';
 import PieModel from '../../models/pie.model';
-import { HomeComponent } from '../';
 
 @Component({
     selector: 'pie-chart',
@@ -33,7 +32,7 @@ export class PieComponent extends BaseComponent implements OnInit {
 
     public pieChartType:string = 'pie';
 
-    constructor(public notifyService:NotifyService, public homeComponent:HomeComponent) {
+    constructor(public notifyService:NotifyService) {
       super(notifyService);
     }
 

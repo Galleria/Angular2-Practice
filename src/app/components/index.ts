@@ -11,3 +11,5 @@ export * from './Loading/loadingModal.component';
 export * from './Chart/Bar.component'
 export * from './Chart/Pie.component'
 export * from './Chart/Line.component'
+export * from './Chart/Radar.component'
+export * from './Chart/PolarArea.component'

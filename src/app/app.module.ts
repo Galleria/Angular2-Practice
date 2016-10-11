@@ -20,7 +20,9 @@ import {
           LoadingModal,
           BarComponent,
           PieComponent,
-          LineComponent
+          LineComponent,
+          RadarComponent,
+          PolarAreaComponent
         } from './components/';
 
 import { routing , appRoutingProviders } from './app.route';
@@ -53,6 +55,8 @@ import {
                     BarComponent,
                     PieComponent,
                     LineComponent,
+                    RadarComponent,
+                    PolarAreaComponent,
                     AppComponent
                   ],
     bootstrap:    [

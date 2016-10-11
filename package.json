@@ -10,7 +10,7 @@
     "minor": "npm version minor",
     "patch": "npm version patch",
     "postinstall": "typings install",
-    "serve": "webpack-dev-server -p --config webpack_config/webpack.dev.js --inline --progress"
+    "serve": "webpack-dev-server --config webpack_config/webpack.dev.js --inline --progress"
   },
   "dependencies": {
     "@angular/common": "2.0.0",
