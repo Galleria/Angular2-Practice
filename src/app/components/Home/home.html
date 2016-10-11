@@ -1,57 +1,59 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Test Tab and Dashboard</h1>
-    </div>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Test Tab and Dashboard</h1>
   </div>
-  <div class="row paddingTB5">
-    <div class="col-md-12">
-       <tabset>
-        <tab heading="Batches">
-          <a (click)="showMessage()">showMessage</a>
-        </tab>
-        <tab heading="Date Picker">
-          <div class="row">
-            <div class="col-md-12"><bar-chart></bar-chart></div>
-            <div class="col-md-6"><polar-chart></polar-chart></div>
-            <div class="col-md-6"><polar-chart></polar-chart></div>
-            <div class="col-md-6">
-              <pie-chart [pieModel]="pieTest" ></pie-chart>
-              <pie-chart [pieModel]="pieTest" ></pie-chart>
-            </div>
-            <div class="col-md-6"><line-chart></line-chart></div>
+</div>
+<div class="row paddingTB5">
+  <div class="col-md-12">
+      <tabset>
+      <tab heading="Batches">
+        <div class="row" style="min-height:500px">
+          <div class="col-md-12">
+            <a (click)="showMessage()">showMessage</a>
           </div>
-        </tab>
-        <tab heading="Grid-System">
-          <div class="row">
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
-            <div class="col-md-1">.col-md-1</div>
+        </div>
+      </tab>
+      <tab heading="Chart">
+        <div class="row">
+          <div class="col-md-12"><bar-chart></bar-chart></div>
+          <div class="col-md-6"><polar-chart></polar-chart></div>
+          <div class="col-md-6"><polar-chart></polar-chart></div>
+          <div class="col-md-6">
+            <pie-chart [pieModel]="pieTest" ></pie-chart>
+            <pie-chart [pieModel]="pieTest" ></pie-chart>
           </div>
-          <div class="row">
-            <div class="col-md-8">.col-md-8</div>
-            <div class="col-md-4">.col-md-4</div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4">.col-md-4</div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">.col-md-6</div>
-            <div class="col-md-6">.col-md-6</div>
-          </div>
-        </tab>
-      </tabset>
-    </div>
+          <div class="col-md-6"><line-chart></line-chart></div>
+        </div>
+      </tab>
+      <tab heading="Grid-System">
+        <div class="row">
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+          <div class="col-md-1">.col-md-1</div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">.col-md-8</div>
+          <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">.col-md-6</div>
+          <div class="col-md-6">.col-md-6</div>
+        </div>
+      </tab>
+    </tabset>
   </div>
 </div>

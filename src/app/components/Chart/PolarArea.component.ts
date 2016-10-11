@@ -50,7 +50,13 @@ export class PolarAreaComponent extends BaseComponent implements OnInit {
     }
 
     public randomize():void {
-
+      let data = [
+        (Math.random() * 100),
+        (Math.random() * 100),
+        (Math.random() * 100),
+        (Math.random() * 100),
+        (Math.random() * 100)];
+      this.polarAreaChartData = data ;
     }
 
 }

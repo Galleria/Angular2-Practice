@@ -3,8 +3,13 @@ import { Router , ActivatedRoute , Params } from '@angular/router';
 
 @Component({
     template: `
-      {{_id}}
+    <div class="row" style="min-height:500px">
+      <div class="col-md-12">
+        {{_id}}
+        <br/>
+      </div>
       <a routerLink="/dashboard" routerLinkActive="active">Back</a>
+    </div>
     `
 })
 

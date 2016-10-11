@@ -1,6 +1,6 @@
 body {
     margin:0;
-
+	overflow-x: hidden;
     font-size: 12px;
 }
 h1 {
@@ -340,7 +340,7 @@ a.secondaryLink {
 	.table > tbody > tr > td:nth-child(10) {
 		width: 127px;
 		max-width: 150px;
-		overflow: visible;
+		/* overflow: visible; */
 		text-overflow: initial;
 	}
 	.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {

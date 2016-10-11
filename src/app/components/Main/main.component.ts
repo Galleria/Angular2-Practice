@@ -7,7 +7,9 @@ import{Component} from '@angular/core';
         <header></header>
         <loadingModal></loadingModal>
         <notificationMessage></notificationMessage>
-        <router-outlet></router-outlet>
+        <div class="container">
+          <router-outlet></router-outlet>
+        </div>
         <footer></footer>
       </div>
     `,
