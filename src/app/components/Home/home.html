@@ -11,7 +11,14 @@
           <a (click)="showMessage()">showMessage</a>
         </tab>
         <tab heading="Date Picker">
-          <bar-chart></bar-chart>
+          <div class="row">
+            <div class="col-md-12"><bar-chart></bar-chart></div>
+            <div class="col-md-6">
+              <pie-chart [pieModel]="pieTest" ></pie-chart>
+              <pie-chart [pieModel]="pieTest" ></pie-chart>
+            </div>
+            <div class="col-md-6"><line-chart></line-chart></div>
+          </div>
         </tab>
         <tab heading="Grid-System">
           <div class="row">

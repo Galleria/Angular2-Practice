@@ -18,7 +18,9 @@ import {
           DashboardDetailComponent,
           PageNotFoundComponent,
           LoadingModal,
-          BarComponent
+          BarComponent,
+          PieComponent,
+          LineComponent
         } from './components/';
 
 import { routing , appRoutingProviders } from './app.route';
@@ -49,6 +51,8 @@ import {
                     NotifyMessage,
                     LoadingModal,
                     BarComponent,
+                    PieComponent,
+                    LineComponent,
                     AppComponent
                   ],
     bootstrap:    [
