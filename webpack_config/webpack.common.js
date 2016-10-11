@@ -63,6 +63,7 @@ module.exports = {
       historyApiFallback: true,
       stats: {
         colors: true
-      }
+      },
+      compress: true 
     }
 };
