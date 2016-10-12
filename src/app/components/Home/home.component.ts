@@ -6,6 +6,7 @@ import {
 } from '../../services';
 
 import PieModel from '../../models/pie.model';
+import BarModel from '../../models/bar.model';
 
 @Component({
     templateUrl: 'home.html',
@@ -15,9 +16,25 @@ import PieModel from '../../models/pie.model';
 })
 
 export class HomeComponent{
-  public labels:Array<string> = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-  public data:Array<number> = [300,20,100];
-  public pieTest:PieModel = new PieModel('1',this.labels,this.data);
+
+  public pieLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
+  public pieData:number[] = [300,20,100];
+  public pieTest:PieModel = new PieModel('1',this.pieLabels,this.pieData);
+
+  public barChartLabels:string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartData:any[] = [
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
+    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
+    {data: [20, 85, 60, 35, 99, 11, 69], label: 'Series C'}
+  ];
+  public barChartTest:any = new BarModel('2',this.barChartLabels,this.barChartData);
+
+  public barChartLabels_1:string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug' , 'Sep' , 'Oct' , 'Nov' ,'Dec'];
+  public barChartData_1:any[] = [
+    {data: [65, 59, 80, 81, 56, 55, 40, 10, 12, 99, 100, 85 ], label: 'Series A'}
+  ];
+  public barChartTest_1:any = new BarModel('2',this.barChartLabels_1,this.barChartData_1);
+
 
   constructor( public loading: LoadingService, public nmService:NotifyService ) {
 
