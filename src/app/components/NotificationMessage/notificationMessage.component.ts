@@ -24,6 +24,23 @@ export class NotifyMessage implements OnInit, OnDestroy {
 
     }
 
+    ngOnInit() {
+      this._subScription = this.notifyService.showMessage$.subscribe(notifyObj => {
+          this.showMessage(notifyObj);
+      });
+
+      this._clearSubScription = this.notifyService.clearMessage$.subscribe(notifyObj => {
+          this.clearAlert();
+      });
+
+      this._notifyMessageRow = "row paddingL0R5 paddingB5";
+    }
+
+    ngOnDestroy() {
+      this._subScription.unsubscribe();
+      this._clearSubScription.unsubscribe();
+    }
+
     /*
     {message:"Hello",showMessage:true/false,status:"error"/"success"}
     */
@@ -45,21 +62,5 @@ export class NotifyMessage implements OnInit, OnDestroy {
       this.alerts = [];
     }
 
-    ngOnInit() {
-      this._subScription = this.notifyService.showMessage$.subscribe(notifyObj => {
-          this.showMessage(notifyObj);
-      });
-
-      this._clearSubScription = this.notifyService.clearMessage$.subscribe(notifyObj => {
-          this.clearAlert();
-      });
-
-      this._notifyMessageRow = "row paddingL0R5 paddingB5";
-    }
-
-    ngOnDestroy() {
-      this._subScription.unsubscribe();
-      this._clearSubScription.unsubscribe();
-    }
 
 }

@@ -1,8 +1,8 @@
-import {Component , OnInit , Input} from '@angular/core';
+import {Component , OnInit ,OnChanges, Input , SimpleChange  } from '@angular/core';
 import {BaseComponent} from '../BaseComponent';
 
 import { NotifyService } from '../../services';
-import PieModel from '../../models/pie.model';
+import PolarModel from '../../models/polar.model';
 
 @Component({
     selector: 'polar-chart',
@@ -21,24 +21,41 @@ import PieModel from '../../models/pie.model';
                 </div>`
 })
 
-export class PolarAreaComponent extends BaseComponent implements OnInit {
+export class PolarAreaComponent extends BaseComponent implements OnInit,OnChanges {
 
-    @Input() pieModel: PieModel;
+    @Input() polarModel: PolarModel;
 
     // PolarArea
-    public polarAreaChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'];
-    public polarAreaChartData:number[] = [300, 500, 100, 40, 120];
+    public polarAreaChartLabels:string[];//['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'];
+    public polarAreaChartData:number[];//[300, 500, 100, 40, 120];
     public polarAreaLegend:boolean = true;
 
     public polarAreaChartType:string = 'polarArea';
 
     constructor(public notifyService:NotifyService) {
       super(notifyService);
+      setInterval( ()=> console.log( this.polarModel ) ,10000);
     }
 
     ngOnInit() {
+      if( this.polarModel != undefined ){
+        this.polarAreaChartLabels = this.polarModel.labels;
+        this.polarAreaChartData = this.polarModel.data;
+/*
+        this.polarModel.subscribe(() => {
+          console.log('change polarModel')
+        });
+*/
+      }
 
     }
+
+    ngOnChanges(){
+      console.log('sssad');
+      this.polarAreaChartLabels = this.polarModel.labels;
+      this.polarAreaChartData = this.polarModel.data;
+    }
+
 
     // events
     public chartClicked(e:any):void {
@@ -50,7 +67,11 @@ export class PolarAreaComponent extends BaseComponent implements OnInit {
     }
 
     public randomize():void {
-
+      let data = [
+        (Math.random() * 100),
+        (Math.random() * 100),
+        (Math.random() * 100)];
+      this.polarAreaChartData = this.polarModel.data = data ;
     }
 
 }

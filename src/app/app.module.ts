@@ -5,6 +5,8 @@ import { FormsModule , NgForm }    from '@angular/forms';
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { MaterialModule } from '@angular/material';
 
+import { AUTH_PROVIDERS }      from 'angular2-jwt';
+
 import {ChartsModule} from 'ng2-charts/ng2-charts';
 
 import { AppComponent } from './app.component';
@@ -22,14 +24,16 @@ import {
           PieComponent,
           LineComponent,
           RadarComponent,
-          PolarAreaComponent
+          PolarAreaComponent,
+          LoginComponent
         } from './components/';
 
 import { routing , appRoutingProviders } from './app.route';
 
 import {
   LoadingService,
-  NotifyService
+  NotifyService,
+  ObServerService
 } from './services/';
 
 @NgModule({
@@ -57,16 +61,17 @@ import {
                     LineComponent,
                     RadarComponent,
                     PolarAreaComponent,
-                    AppComponent
-                  ],
-    bootstrap:    [
+                    LoginComponent,
                     AppComponent
                   ],
     providers:    [
+                    AUTH_PROVIDERS,
                     appRoutingProviders,
                     NotifyService,
-                    LoadingService
-                  ]
+                    LoadingService,
+                    ObServerService
+                  ],
+    bootstrap:    [ AppComponent ]
 })
 
 export class AppModule {}

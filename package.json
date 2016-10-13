@@ -2,7 +2,7 @@
   "name": "auditrelease",
   "version": "1.0.6",
   "scripts": {
-    "build:dev": "webpack -d --config webpack_config/webpack.dev.js --progress --colors  --json | webpack-bundle-size-analyzer",
+    "build:dev": "webpack -d --config webpack_config/webpack.dev.js --progress --colors --optimize-minimize --json | webpack-bundle-size-analyzer",
     "build:qa": "webpack -d --config webpack_config/webpack.qa.js --progress --colors",
     "build:uat": "webpack -p --config webpack_config/webpack.uat.js --progress --colors",
     "build:prod": "webpack -p --config webpack_config/webpack.prod.js --progress --colors --json | webpack-bundle-size-analyzer",
@@ -24,6 +24,8 @@
     "@angular/platform-webworker": "2.0.0",
     "@angular/router": "3.0.0",
     "@angular/upgrade": "2.0.0",
+    "angular2-jwt": "^0.1.24",
+    "auth0-lock": "^10.4.0",
     "bootstrap": "^3.3.7",
     "chart.js": "^2.3.0",
     "core-js": "^2.4.1",

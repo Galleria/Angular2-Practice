@@ -5,7 +5,7 @@ import { NotifyService } from '../services';
 export class BaseComponent implements OnInit, OnDestroy {
 
     constructor(public notifyService:NotifyService ) {
-      console.log( this.notifyService )
+      //console.log( this.notifyService )
     }
 
     ngOnInit() {

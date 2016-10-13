@@ -1,7 +1,7 @@
 import {Component , OnInit,Input} from '@angular/core';
 import {BaseComponent} from '../BaseComponent';
 
-import { NotifyService } from '../../services';
+import { NotifyService , ObServerService } from '../../services';
 
 import BarModel from '../../models/bar.model';
 
@@ -35,7 +35,7 @@ export class BarComponent extends BaseComponent implements OnInit {
     public barChartLabels:string[];
     public barChartData:any[];
 
-    constructor(public notifyService:NotifyService) {
+    constructor(public notifyService:NotifyService,public obServerService:ObServerService) {
       super(notifyService);
     }
 
@@ -46,7 +46,8 @@ export class BarComponent extends BaseComponent implements OnInit {
 
     // events
     public chartClicked(e:any,idx:any):void {
-      console.log(e);
+      //console.log(e);
+        this.obServerService.passDataServices('');
     }
 
     public chartHovered(e:any):void {
