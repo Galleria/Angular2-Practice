@@ -60,10 +60,11 @@ module.exports = {
         )
     ],
     devServer: {
+      port:8083,
       historyApiFallback: true,
       stats: {
         colors: true
       },
-      compress: true 
+      compress: true
     }
 };

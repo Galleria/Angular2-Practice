@@ -8,6 +8,9 @@ import{Component,ViewEncapsulation} from '@angular/core';
         <span class="example-fill-remaining-space"></span>
         <nav>
           <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+          <button md-button color="accent" >
+            Learn More
+          </button>
         </nav>
       </md-toolbar>
     `,
