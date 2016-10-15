@@ -74,8 +74,9 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   changeData(data){
     console.log( 'this.polarChartTest.data ',this.polarChartTest.data );
-    this.polarChartTest.data = [100,100,100];
-    console.log( 'this.polarChartTest.data ',this.polarChartTest.data );
+    let datas = [100,100,100];
+    this.polarChartTest = new PolarModel('1',this.polarLabels,datas);
+    //console.log( 'this.polarChartTest.data ',this.polarChartTest.data );
   }
 
 }

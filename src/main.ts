@@ -12,7 +12,7 @@ import './app/assets/css/styles.css';
 import '@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 import '../node_modules/chart.js/src/chart.js';
 
-import './app/assets/js/lock.min.js';
+//import './app/assets/js/lock.min.js';
 
 declare var process: any;
 if (process.env.ENV !== "DEV") {

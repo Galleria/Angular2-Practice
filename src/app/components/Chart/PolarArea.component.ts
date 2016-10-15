@@ -1,4 +1,4 @@
-import {Component , OnInit ,OnChanges, Input , SimpleChange  } from '@angular/core';
+import {Component , OnInit ,OnChanges, Input , SimpleChange ,DoCheck,AfterContentChecked} from '@angular/core';
 import {BaseComponent} from '../BaseComponent';
 
 import { NotifyService } from '../../services';
@@ -21,9 +21,19 @@ import PolarModel from '../../models/polar.model';
                 </div>`
 })
 
-export class PolarAreaComponent extends BaseComponent implements OnInit,OnChanges {
+export class PolarAreaComponent extends BaseComponent implements OnInit,OnChanges,DoCheck,AfterContentChecked {
 
     @Input() polarModel: PolarModel;
+/*
+    @Input()
+    set polarModel(polarModel: PolarModel) {
+      if( polarModel != undefined ){
+        console.log( 'polarModel ',polarModel );
+        this.polarAreaChartLabels = polarModel.labels;
+        this.polarAreaChartData = polarModel.data;
+      }
+    }
+*/
 
     // PolarArea
     public polarAreaChartLabels:string[];//['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'];
@@ -37,24 +47,30 @@ export class PolarAreaComponent extends BaseComponent implements OnInit,OnChange
       setInterval( ()=> console.log( this.polarModel ) ,10000);
     }
 
+    ngDoCheck(){
+      //console.log('DoCheck');
+    }
+
+       ngAfterContentChecked(){
+      //console.log('ngAfterContentChecked')
+    }
+
+
     ngOnInit() {
+      
       if( this.polarModel != undefined ){
         this.polarAreaChartLabels = this.polarModel.labels;
         this.polarAreaChartData = this.polarModel.data;
-/*
-        this.polarModel.subscribe(() => {
-          console.log('change polarModel')
-        });
-*/
       }
-
+ 
     }
 
-    ngOnChanges(){
-      console.log('sssad');
+    ngOnChanges(...args: any[]) {
       this.polarAreaChartLabels = this.polarModel.labels;
-      this.polarAreaChartData = this.polarModel.data;
-    }
+        this.polarAreaChartData = this.polarModel.data;
+        console.log('polarModel updated');
+  }
+
 
 
     // events
@@ -71,7 +87,7 @@ export class PolarAreaComponent extends BaseComponent implements OnInit,OnChange
         (Math.random() * 100),
         (Math.random() * 100),
         (Math.random() * 100)];
-      this.polarAreaChartData = this.polarModel.data = data ;
+      this.polarAreaChartData = this.polarModel.data = data ; //this.polarModel.data = 
     }
 
 }
