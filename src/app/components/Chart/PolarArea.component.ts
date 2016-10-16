@@ -44,7 +44,7 @@ export class PolarAreaComponent extends BaseComponent implements OnInit,OnChange
 
     constructor(public notifyService:NotifyService) {
       super(notifyService);
-      setInterval( ()=> console.log( this.polarModel ) ,10000);
+      //setInterval( ()=> console.log( this.polarModel ) ,10000);
     }
 
     ngDoCheck(){
