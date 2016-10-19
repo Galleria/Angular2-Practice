@@ -32,7 +32,7 @@ export class BarComponent extends BaseComponent implements OnInit,OnChanges {
         backgroundColor: 'red',
       datasetIndex: Number,
       index: Number
-        
+
       },
       events:{
         click:function(e){
@@ -70,7 +70,7 @@ export class BarComponent extends BaseComponent implements OnInit,OnChanges {
 
     // events
     public chartClicked(e:any):void {
-      console.log(e);
+      console.dir(e);
       if( e.active[0] != undefined ){
         this.obServerService.passDataServices( e.active[0]._index );
       }

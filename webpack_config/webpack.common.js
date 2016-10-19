@@ -3,6 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VERSION = require('../package.json').version;
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 const METADATA = {
     title:"Audit and Release",
@@ -58,6 +59,7 @@ module.exports = {
                 { from: './src/app/html/error.html', to: 'error.html' }
             ]
         )
+        //,  new DashboardPlugin()
     ],
     devServer: {
       port:8083,

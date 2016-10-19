@@ -2,7 +2,7 @@
   "name": "auditrelease",
   "version": "1.0.6",
   "scripts": {
-    "build:dev": "webpack -d --config webpack_config/webpack.dev.js --progress --colors --optimize-minimize --json | webpack-bundle-size-analyzer",
+    "build:dev": "webpack -d --config webpack_config/webpack.dev.js --progress --colors --optimize-minimize | webpack-bundle-size-analyzer",
     "build:qa": "webpack -d --config webpack_config/webpack.qa.js --progress --colors",
     "build:uat": "webpack -p --config webpack_config/webpack.uat.js --progress --colors",
     "build:prod": "webpack -p --config webpack_config/webpack.prod.js --progress --colors --json | webpack-bundle-size-analyzer",
@@ -58,6 +58,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-bundle-size-analyzer": "^2.2.0",
+    "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.1"
   }
