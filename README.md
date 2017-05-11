@@ -66,3 +66,9 @@ export class Component {
 })
 ```
 
+---
+Reference Html Element
+
+- by ViewChild() , #name , ElementRef // Reference or adjusted attribute in element.
+- by [(ngModel)] // Reference value in element.
+
