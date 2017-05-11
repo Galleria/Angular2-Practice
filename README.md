@@ -69,6 +69,7 @@ export class Component {
 ---
 Reference Html Element
 
-- by ViewChild() , #name , ElementRef // Reference or adjusted attribute in element.
+- by ViewChild() , #name , ElementRef // Reference or adjusted attribute in element. 
+this.el.nativeElement.style.background = "red";
 - by [(ngModel)] // Reference value in element.
 
